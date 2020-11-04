@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import Element3 from 'element3'
+import "element3/lib/theme-chalk/index.css";
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
 // import locale from 'element-ui/lib/locale/lang/en' // lang i18n
