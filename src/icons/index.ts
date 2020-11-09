@@ -1,4 +1,4 @@
-import SvgIcon from '@/components/SvgIcon' // svg component
+import SvgIcon from '@/components/SvgIcon/index.vue' // svg component
 
 export function useIcons(app) {
   // register globally

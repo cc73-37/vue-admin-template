@@ -1,4 +1,4 @@
-import defaultSettings from '@/settings'
+import defaultSettings from '@/settings.ts'
 
 const title = defaultSettings.title || 'Vue Admin Template'
 

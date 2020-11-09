@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
-import "element3/lib/theme-chalk/index.css"
+import 'element3/lib/theme-chalk/index.css'
 import Element3 from 'element3'
 
 // import ElementUI from 'element-ui'
@@ -11,7 +11,7 @@ import Element3 from 'element3'
 
 import '@/styles/index.scss' // global css
 
-import App from './App'
+import App from './App.vue'
 import store from './store'
 import router from './router'
 
