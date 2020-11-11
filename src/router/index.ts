@@ -164,7 +164,7 @@ export const constantRoutes: Routes[] = [
       {
         path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
         meta: { title: 'External Link', icon: 'link' },
-        // TODO
+        // TODO 此处没有使用component而是path外链的形式,提示缺少redirect暂时为消除警告,需要改进
         redirect: '',
       },
     ],
@@ -181,7 +181,6 @@ export const constantRoutes: Routes[] = [
 
 const getRouter = () =>
   createRouter({
-    // mode: 'history', // require service support
     history: createWebHashHistory(),
     scrollBehavior: () => ({ top: 0 }),
     routes: constantRoutes,
@@ -191,8 +190,8 @@ const router = getRouter()
 
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
 export function resetRouter() {
-  const newRouter = getRouter()
-  //  TODO
+  // const newRouter = getRouter()
+  //  TODO use router4 
   // router.matcher = newRouter.matcher // reset router
 }
 

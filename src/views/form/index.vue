@@ -48,6 +48,8 @@
 </template>
 
 <script>
+// import { useMessage } from 'element3'
+// const Message = useMessage()
 export default {
   data() {
     return {
@@ -65,13 +67,13 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$message('submit!')
+      // Message('submit!')
     },
     onCancel() {
-      this.$message({
-        message: 'cancel!',
-        type: 'warning',
-      })
+      // Message({
+      //   message: 'cancel!',
+      //   type: 'warning',
+      // })
     },
   },
 }
