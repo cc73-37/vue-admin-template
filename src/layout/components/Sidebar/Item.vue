@@ -17,7 +17,11 @@ export default {
 
     if (icon) {
       if (icon.includes('el-icon')) {
-        vnodes.push(<i class={[icon, 'sub-el-icon']} />)
+        if(icon === 'el-icon-s-help'){
+          vnodes.push(<i class={[icon, 'sub-el-icon']} style={'width:18px'} />)
+        }else{
+          vnodes.push(<i class={[icon, 'sub-el-icon']} />)
+        }
       } else {
         vnodes.push(<svg-icon icon-class={icon} />)
       }

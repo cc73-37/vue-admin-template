@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { Table } from 'ant-design-vue';
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
@@ -42,3 +43,4 @@ const app = createApp(App)
   .use(Element3)
 useIcons(app)
 app.mount('#app')
+app.use(Table);
