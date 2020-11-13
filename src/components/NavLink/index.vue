@@ -14,10 +14,11 @@
   </router-link>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { RouterLink } from 'vue-router'
 
-export default {
+export default defineComponent ({
   name: 'AppLink',
 
   props: {
@@ -31,5 +32,5 @@ export default {
       return typeof this.to === 'string' && this.to.startsWith('http')
     },
   },
-}
+})
 </script>

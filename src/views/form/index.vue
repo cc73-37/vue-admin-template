@@ -47,10 +47,11 @@
   </div>
 </template>
 
-<script>
-// import { useMessage } from 'element3'
-// const Message = useMessage()
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useMessage } from 'element3'
+const Message = useMessage()
+export default defineComponent({
   data() {
     return {
       form: {
@@ -67,16 +68,16 @@ export default {
   },
   methods: {
     onSubmit() {
-      // Message('submit!')
+      Message('submit!')
     },
     onCancel() {
-      // Message({
-      //   message: 'cancel!',
-      //   type: 'warning',
-      // })
+      Message({
+        message: 'cancel!',
+        type: 'warning',
+      })
     },
   },
-}
+})
 </script>
 
 <style scoped>

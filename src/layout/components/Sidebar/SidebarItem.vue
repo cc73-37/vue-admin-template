@@ -24,13 +24,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import path from 'path'
 import { isExternal } from '@/utils/validate'
-import Item from './Item'
-import AppLink from './Link'
+import Item from './Item.vue'
+import AppLink from './Link.vue'
 import FixiOSBug from './FixiOSBug'
-export default {
+
+export default defineComponent({
   name: 'SidebarItem',
   components: { Item, AppLink },
   mixins: [FixiOSBug],
@@ -87,5 +89,5 @@ export default {
       return path.resolve(this.basePath, routePath)
     }
   }
-}
+})
 </script>

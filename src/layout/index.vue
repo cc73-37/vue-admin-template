@@ -11,11 +11,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { Navbar, Sidebar, AppMain } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 
-export default {
+export default defineComponent({
   name: 'Layout',
   components: {
     Navbar,
@@ -47,7 +48,7 @@ export default {
       this.$store.dispatch('app/closeSideBar', { withoutAnimation: false })
     },
   },
-}
+})
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,7 @@
 <script>
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent ({
   name: 'MenuItem',
   props: {
     icon: {
@@ -30,7 +32,7 @@ export default {
     }
     return vnodes
   },
-}
+})
 </script>
 
 <style scoped>

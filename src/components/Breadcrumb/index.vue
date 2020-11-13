@@ -9,10 +9,11 @@
   </el-breadcrumb>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import pathToRegexp from 'path-to-regexp'
 
-export default {
+export default defineComponent ({
   data() {
     return {
       levelList: null,
@@ -60,7 +61,7 @@ export default {
       this.$router.push(this.pathCompile(path))
     },
   },
-}
+})
 </script>
 
 <style lang="scss" scoped>

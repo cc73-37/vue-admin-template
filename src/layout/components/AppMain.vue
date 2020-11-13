@@ -8,15 +8,17 @@
   </section>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent ({
   name: 'AppMain',
   computed: {
     key() {
       return this.$route.path
     },
   },
-}
+})
 </script>
 
 <style scoped>

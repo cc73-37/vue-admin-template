@@ -23,13 +23,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { mapGetters } from 'vuex'
 import Logo from './Logo'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 
-export default {
+export default defineComponent ({
   components: { SidebarItem, Logo },
   computed: {
     ...mapGetters(['sidebar']),
@@ -55,5 +56,5 @@ export default {
       return !this.sidebar.opened
     },
   },
-}
+})
 </script>

@@ -1,6 +1,6 @@
 import router from './router'
 import store from './store'
-// import { useMessage } from 'element3'
+import { useMessage } from 'element3'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
@@ -38,8 +38,8 @@ router.beforeEach(async(to, from, next) => {
         } catch (error) {
           // remove token and go to login page to re-login
           await store.dispatch('user/resetToken')
-          // const Message = useMessage()
-          console.error(error || 'Has Error')
+          const Message = useMessage()
+          Message.error(error || 'Has Error')
           next(`/login?redirect=${to.path}`)
           NProgress.done()
         }

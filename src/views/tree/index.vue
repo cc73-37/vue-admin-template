@@ -3,9 +3,9 @@
     <el-input v-model="filterText" placeholder="Filter keyword" style="margin-bottom:30px;" />
 
     <el-tree
-      ref="tree2"
-      :data="data2"
-      :props="defaultProps"
+      ref="tree"
+      :data="data"
+      :defaultNodeKey="defaultNodeKey"
       :filter-node-method="filterNode"
       class="filter-tree"
       default-expand-all
@@ -14,13 +14,15 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
 
   data() {
     return {
       filterText: '',
-      data2: [{
+      data: [{
         id: 1,
         label: 'Level one 1',
         children: [{
@@ -55,15 +57,17 @@ export default {
           label: 'Level two 3-2',
         }],
       }],
-      defaultProps: {
-        children: 'children',
+      defaultNodeKey: {
+        childNodes: 'children',
         label: 'label',
       },
     }
   },
   watch: {
     filterText(val) {
-      this.$refs.tree2.filter(val)
+      this.$refs.tree.filter((node)=>{
+            return this.filterNode(val, node)
+        });
     },
   },
 
@@ -73,6 +77,6 @@ export default {
       return data.label.indexOf(value) !== -1
     },
   },
-}
+})
 </script>
 

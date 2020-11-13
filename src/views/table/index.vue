@@ -43,10 +43,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
 import { getList } from '@/api/table'
 
-export default {
+export default defineComponent({
   filters: {
     statusFilter(status) {
       const statusMap = {
@@ -75,5 +77,5 @@ export default {
       })
     },
   },
-}
+})
 </script>
